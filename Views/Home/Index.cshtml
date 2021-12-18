@@ -1,0 +1,8 @@
+﻿@{
+    ViewData["Title"] = "Home Page";    
+}
+
+    @if (User.Identity.IsAuthenticated) 
+    {         
+        <p>Bạn đã đăng nhập thành công, @User.Claims.First(x => x.Type == "UserName").Value</p>
+    }    
